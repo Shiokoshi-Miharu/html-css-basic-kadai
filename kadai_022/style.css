@@ -1,0 +1,119 @@
+h1 {
+  /*h1要素の上下左右余白（margin）を0*/
+  margin: 0px;
+  /*文字色をrgb(255, 255, 255)*/
+  color: rgb(255, 255, 255);
+}
+
+p {
+  /*p要素の上下左右余白（margin）を0*/
+  margin: 0px;
+}
+
+body {
+  /*body要素の上下左右余白（margin）を0*/
+  margin: 0;
+  /*記事内全てのp要素とa要素のフォントサイズを20px*/
+  font-size: 20px;
+  }
+
+header {
+    /*下の余白を20px*/
+    margin-bottom: 20px; 
+    /*背景色を「 rgb(244, 79, 79)」*/
+    background: rgb(244, 79, 79);
+    /*中の要素が中央揃え*/
+    text-align: center;
+  }
+
+main {
+  /*main要素内の余白を上下左右とも10px*/ 
+  margin: 10px;
+}
+
+#parent {
+/*displayプロパティでid名parentの要素をFlexコンテナに*/
+display: flex;
+/*justify-contentプロパティ*/
+/*Flexboxコンテナの子要素（Flexアイテム）「一番左と一番右のアイテムも含め、均等な間隔で配置する」値を設定*/  
+justify-content: space-around;
+text-align: center;
+}
+
+.contents {
+/*線（太さ3px、実線、色rgb(238, 204, 204)）で要素を囲う*/
+border: solid 3px rgb(238, 204, 204);
+/*幅は親要素の25%*/
+/*プロパティはwidthではなく、flex-basisを使う*/
+flex-basis: 25%;
+/*要素内の余白は上下10px、左右15px*/
+padding: 10px 15px;
+/*要素外の余白は上下20px、左右0*/
+margin: 20px 0px;
+/*中の要素が中央揃え*/
+text-align: center;
+}
+
+h2 {
+/*h2要素のフォントサイズを25px*/
+font-size: 25px;
+/*下線（太さ3px、点線、色rgb(236, 122, 122)）*/
+border-bottom: 3px dotted rgb(236, 122, 122);
+}
+
+h2::before {
+  /*h2要素の前に「●」記号を表示*/
+  content: "●";
+  /*色はrgb(239, 111, 139)*/
+  color: rgb(239, 111, 139);
+}
+
+p:nth-of-type(2)::first-letter {
+/*class名contents内の二番目のp要素内のテキストの中で一番目の文字にのみ*/
+/*nth-of-type(n)とfirst-letterを組み合わせる*/
+/*太字*/
+  font-weight: bold;
+/*文字色はrgb(97, 206, 249)*/
+  color: rgb(97, 206, 249);
+}
+
+.contents img {
+/*marginは上下10px、左右0*/
+margin: 10px 0px;
+/*幅は70%*/
+width: 70%;
+}
+
+footer {
+/*背景色はrgb(244, 79, 79)*/
+background-color: rgb(244, 79, 79);
+/*中身の要素が中央揃え*/
+text-align: center;
+}
+
+a {
+/*文字色はrgb(255, 255, 255)*/
+color: rgb(255, 255, 255);
+}
+a :visited {
+/*訪問済みリンクの文字色がrgb(193, 234, 251)に変化*/
+color: rgb(193, 234, 251);
+}
+a :hover {
+/*マウスカーソルが乗ると文字色がrgb(245, 178, 168)に変化*/
+color: rgb(245, 178, 168);
+}
+
+/*画面幅768px以下になったら表示が変わるようにブレークポイントを設定*/
+@media screen and (max-width: 768px) {
+/*画面幅768px以下のスタイル設定*/
+/*h2のフォントサイズは30px*/
+  h2 {font-size: 30px;}
+/*pのフォントサイズは25px*/
+  p {font-size: 25px;}
+/*Flexboxコンテナであるid名parent内の要素が縦に並ぶ*/
+  #parent {
+      display: felx;
+      flex-direction: column;
+  }
+}
