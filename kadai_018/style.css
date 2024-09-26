@@ -1,0 +1,132 @@
+#top{
+  /*横幅を800px*/
+  width: 800px;
+  /*背景色を「 #dcc9f4」*/  
+  background-color: #dcc9f4;
+  /*上下に20pxの余白*/
+  margin: 20px 0px;
+  /*画面の中央に配置*/
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.top-child{
+  /*横幅を親要素（top）の20%*/
+  width: 20%;
+  /*背景色を「#ffd9df」*/
+  background-color: #ffd9df;
+  /*3つのp要素が横並び*/
+  display: inline-block;
+}
+
+#middle {
+  /*横幅を800px*/
+  width: 800px;
+  /*高さを800px*/
+  height: 800px;
+  /*上下に20pxの余白(一番上の図形と一番下の図形との上下間隔が20pxになる)*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /*画面の中央に配置*/
+  margin-left: auto;
+  margin-right: auto;
+  /*背景色を「#ffd9df 」*/
+  background-color: #ffd9df;
+  /*middle-childにpositon:absoluteを適用するために*/
+  position: relative;
+}
+
+/*positionプロパティでdiv要素（id名「middle」）とdiv要素（id名「middle-child01～03」）のCSSコードを記入*/
+#middle-child01 {
+  /*横幅を200px*/
+  width: 200px;
+  /*高さを200px*/
+  height: 200px;
+  /*背景色を「#87ceeb」*/
+  background-color: #87ceeb;
+  /*div要素（id名「middle-child01」）は、親要素のdiv要素（id名「middle」）*/
+  position: absolute;  
+  /*上から100px*/
+  top: 100px;
+  /*左から100px距離を取った場所に配置*/
+  left: 100px;
+}
+
+#middle-child02 {
+  /*横幅を200px*/
+  width: 200px;
+  /*高さを200px*/
+  height: 200px;
+  /*背景色を「#87ceeb」*/
+  background-color: #87ceeb;
+  /*div要素（id名「middle-child02」）は、親要素のdiv要素（id名「middle」）*/
+  position: absolute;
+  /*上から300px*/
+  top: 300px;
+  /*左から300px距離を取った場所に配置*/
+  left: 300px;
+}
+
+#middle-child03 {
+  /*横幅を200px*/
+  width: 200px;
+  /*高さを200px*/
+  height: 200px;
+  /*背景色を「#87ceeb」*/
+  background-color: #87ceeb;
+  /*div要素（id名「middle-child03」）は、親要素のdiv要素（id名「middle」）*/
+  position: absolute;
+  /*上から500px*/
+  top: 500px;
+  /*左から500px距離を取った場所に配置*/
+  left: 500px;
+}
+
+#bottom  {
+  /*横幅を800px*/
+  width: 800px; 
+  /*高さを300px*/
+  height: 300px;
+  /*画面の中央に配置*/
+  margin-left: auto;
+  margin-right: auto;
+  /*背景色を「#87ceeb」*/
+  background-color:#87ceeb;
+  /*bottom-childにpositon:relativeを適用するために*/
+  position: relative;
+}
+
+#bottom-child01 {
+  /*横幅を400px*/
+  width: 400px;
+  /*高さを100px*/ 
+  height: 100px;
+  /*背景色を「#e5dcf0」*/
+  background-color:#e5dcf0;
+}
+
+/*positionプロパティを利用し、div要素（id名「bottom-child02」「bottom-child03」）のCSSコードを記入*/
+#bottom-child02 {
+  /*横幅を400px*/
+  width: 400px;
+  /*高さを100px*/ 
+  height: 100px;
+  /*背景色を「#e5dcf0」*/
+  background-color:#e5dcf0;
+  /*div要素（id名「bottom-child02」）は、本来の表示場所の左から200pxずらして配置*/
+  position: relative;
+  left: 200px;
+}
+
+#bottom-child03 {
+  /*横幅を400px*/
+  width: 400px;
+  /*高さを100px*/ 
+  height: 100px;
+  /*背景色を「#e5dcf0」*/
+  background-color:#e5dcf0;
+  /*div要素（id名「bottom-child03」）は、本来の表示場所の左から400pxずらして配置*/
+  position: relative;
+  left: 400px;
+}
